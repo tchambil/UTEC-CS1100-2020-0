@@ -40,8 +40,44 @@ class Solution:
         print("El promedio mas alto es: ",mayor)
 
     def Pregunta2(self):
-         pass
+
+        mayor = 0
+        menor = 0
+        n = 0
+        for i in range(1, 5):
+            sumanota = 0
+            for j in range(1, 4):
+                nota = int(input("Ingrese la nota [{}] del alumno [{}]:".format(j, i)))
+                sumanota += nota
+
+                if nota <= 10:
+                    n += 1
+                if j == 1:
+                    menor = nota
+                if nota < menor:
+                    menor = nota
+
+                if j == 1:
+                    mayor = nota
+                if nota > mayor:
+                    mayor = nota
+            print("El nota mas baja es {} ".format(menor))
+            print("El nota mas alta es {} ".format(mayor))
+            promedio = sumanota / 3
+            if promedio > 15 and n >= 1:
+                print("Si va a dar examen final")
+            elif promedio <= 15:
+                print("Si va a dar examen final")
+            elif promedio > 15 and n == 0:
+                print("No va a dar examen")
+            n = 0
+            if i == 1:
+                mayor = promedio
+            if promedio > mayor:
+                mayor = promedio
+
+        print("El promedio mas alto es {} ".format(mayor))
 
 
-Solution().Pregunta1()
+#Solution().Pregunta1()
 Solution().Pregunta2()
