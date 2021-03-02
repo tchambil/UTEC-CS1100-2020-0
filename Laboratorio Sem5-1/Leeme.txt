@@ -1,0 +1,3 @@
+5_1a, solución de pokemos con colisiones
+5_1b, obtener bitman 2x2 de una imagen grande
+de acuerdo al enunciado
